@@ -10,6 +10,6 @@ const routes = require('./routes')
 app.set('port', process.env.PORT || 8000)
 app.use(express.urlencoded({extended: false}))
 app.use(morgan('dev'))
-app.use('/practica1',routes)
+app.use('/',routes)
 
 module.exports = app
