@@ -21,7 +21,7 @@ ctrl.login = async (req,res)=>{
         return res.status(404).send({message: `no existe el usuario`})
     }
     else{
-        const match = userr.matchPassword(req.body.password)
+        const match = await userr.matchPassword(req.body.password)
         if(match){
             req.user = userr
             res.status(200).send({
